@@ -1,0 +1,128 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    background: #FAF9F5;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+.nav {
+    width: 100%;
+    position: fixed;
+    background: #FAF9F5;
+    box-shadow: 0px 2px 2px rgb(161, 161, 161);
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.nav-list {
+    width: auto;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.nav-list li {
+    margin-right: 2rem;
+}
+.nav-list li:hover {
+    background: black;
+    transform: scale(1.5);
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+}
+.nav-list a,  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo {
+    margin: 1rem 1rem;
+    padding: 0;
+    float: left;
+    width: auto;
+    height: 80%;
+    color: transparent;
+    background-color: yellow;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.logo:hover {
+    color: black;
+    background-color: white;
+}
+h1 {
+    font-size: 3rem;
+}
+.whole-page {
+    bottom: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+.starter {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#spinner {
+    font-size: 5rem;
+    text-align: center;
+    animation-name: spin, depth;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  #spinner::before,
+  #spinner::after {
+    content: "Jiarui Jiang";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: rotateY(0.5deg);
+    transform-origin: 0 50%;
+  }
+  #spinner::after {
+    transform: rotateY(-0.5deg);
+    transform-origin: 100% 50%;
+  }
+  @keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-360deg); }
+  }
+  @keyframes depth {
+    0% { text-shadow: 0 0 black; }
+    25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black, 6px 0 black; }
+    50% { text-shadow: 0 0 black; }
+    75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black, -6px 0 black; }
+    100% { text-shadow: 0 0 black; }
+  }
+
+.spin {
+    width: 100%;
+    display: block;
+    margin: 0px;
+}
+
+
+
+

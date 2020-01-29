@@ -1,0 +1,154 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    background: #FAF9F5;
+}
+.nav {
+    width: 100%;
+    position: fixed;
+    justify-content: flex-end;
+    background: #FAF9F5;
+    box-shadow: 0px 2px 2px rgb(161, 161, 161);
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.nav-list {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.nav-list li {
+    margin-right: 2rem;
+}
+.nav-list li:hover {
+    background: black;
+    transform: scale(1.5);
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+}
+.nav-list a, a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.logo {
+    margin: 1rem 1rem;
+    padding: 0;
+    float: left;
+    width: auto;
+    height: 80%;
+    color: transparent;
+    background-color: yellow;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.logo:hover {
+    color: black;
+    background-color: white;
+}
+  h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+  }
+  
+.main-contact {
+    width: 100%;
+    height: 100%;
+}
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+  }
+  
+  .contact-section-header > h2 {
+    font-size: 6rem;
+  }
+  
+  @media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 4rem;
+    }
+  }
+  
+  .contact-section-header > p {
+    font-style: italic;
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-details {
+    font-size: 2.4rem;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .contact-details:hover {
+    transform: translateY(8px);
+  }
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+
+.fab{
+    font-family: "Font Awesome 5 Brands"!important;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+footer {
+    bottom: 0;
+    margin: 0;
+    padding: 0 1rem;
+    width:100%; 
+    height: 60px;
+    box-shadow: 0px -2px 2px rgb(161, 161, 161);
+    text-align: center;
+ }
+.back {
+    margin-top: 1rem;
+    width: 100%;
+    text-decoration: none;
+}
+.bot {
+    bottom: 0px;
+}
+.copy-right {
+    float: left;
+}
+.icon {
+    float: right;
+    margin-right: 10px;
+}
+.small-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 7px;
+}
