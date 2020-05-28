@@ -1,0 +1,125 @@
+
+html {
+    height:100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  /* 1200px / 16px = 75em */
+
+
+body {
+    height:100%;
+    font: 100% sans-serif;
+    margin: 0em;
+    background-color:  #FAF9F5;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+
+a {
+    color:black;
+    font-size: 1.5rem;
+}
+
+.hder-nav {
+    width: 100%;
+    position: fixed;
+    justify-content: flex-end;
+    background: #FAF9F5;
+    box-shadow: 0px 2px 2px rgb(161, 161, 161);
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.hder-nav-list {
+    margin: 1rem 1rem;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.hder-nav-list li {
+    margin-bottom:0px;
+    height: auto;
+    width: auto;
+    margin-right: 2rem;
+}
+.hder-nav-list li:hover {
+    background: black;
+    transform: scale(1.5);
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+}
+.hder-nav-list-a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.hder-nav-list-a:hover {
+    text-decoration: none;
+    color: black;
+}
+.hder-logo {
+    margin: 1rem 1rem;
+    padding: 0;
+    float: left;
+    width: auto;
+    height: 80%;
+    color: transparent;
+    background-color: yellow;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+.hder-logo:hover {
+    color: black;
+    background-color: white;
+}
+
+
+
+
+
+ 
+.hder-footer {
+    bottom: 0;
+    position: relative;
+    padding: 0 1rem;
+    width: 100%; 
+    height: 60px;
+    box-shadow: 0px -2px 2px rgb(161, 161, 161);
+    text-align: center;
+ }
+.hder-back {
+    margin-top: 1rem;
+    width: 100%;
+    text-decoration: none;
+}
+.hder-bot {
+    bottom: 0px;
+}
+.hder-copy-right {
+    float: left;
+}
+.hder-icon {
+    float: right;
+    margin-right: 2rem;
+}
+.hder-small-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 7px;
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 10rem;
+    }
+}
+
+.row {
+    margin-top: 4rem;
+    min-height: 80%;
+}

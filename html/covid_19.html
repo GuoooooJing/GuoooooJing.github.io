@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="../js/jquery.js"></script> 
+    <script> 
+    $(function(){
+        var includes = $('[data-include]');
+        jQuery.each(includes, function(){
+        var file = $(this).data('include') + '.html';
+        $(this).load(file);
+        });
+        });
+    </script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- Custom styles for this template >
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
+    
+    <link th:href="@{/css/style.css}" rel="stylesheet" /-->
+    <link rel="stylesheet" type="text/css" href="../css/covid.css">
+    <title>COVID_19 Visual</title>
+    <link rel="shortcut icon" href="../img/icon.ico">
+</head>
+<body>
+    <a id="top"></a>
+    <header>
+        <nav id="navbar" class="hder-nav">
+            <ul id="nav-ul" class="hder-nav-list">
+                <li><a class="hder-nav-list-a" href="../html/hobbies.html">Hobbies</a></li>
+                <li><a class="hder-nav-list-a" href="../html/resume.html">Resume</a></li>
+                <li><a class="hder-nav-list-a" href="../html/contact.html">Contact</a></li>
+            </ul>
+            <a class="hder-logo hder-nav-list-a" href="/index.html">Jiarui Jiang</a>
+        </nav>
+    </header>
+    <div class="row">
+        <div class="col-12">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="tab-1" data-toggle="tab" href="#d1" role="tab" aria-controls="d1" aria-selected="true">Confirmed Cases</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="tab-2" data-toggle="tab" href="#d2" role="tab" aria-controls="d2" aria-selected="false">Testing Rate</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="tab-3" data-toggle="tab" href="#d3" role="tab" aria-controls="d3" aria-selected="false">Mortality Rate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tab-4" data-toggle="tab" href="#d4" role="tab" aria-controls="d4" aria-selected="false">Hospitalization Rate</a>
+                  </li>
+              </ul>
+            <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item"><a class="nav-link active"
+                    id="home-tab" data-toggle="tab" href="#tab-1" role="tab"
+                    aria-controls="home" aria-selected="true">Confirmed Cases</a></li>
+                <li class="nav-item"><a class="nav-link "
+                    id="profile-tab" data-toggle="tab" href="#tab-2" role="tab"
+                    aria-controls="profile" aria-selected="false">Testing Rate</a></li>
+                <li class="nav-item"><a class="nav-link "
+                    id="profile-tab" data-toggle="tab" href="#tab-3" role="tab"
+                    aria-controls="profile" aria-selected="false">Mortality Rate</a></li>
+                <li class="nav-item"><a class="nav-link "
+                    id="profile-tab" data-toggle="tab" href="#tab-4" role="tab"
+                    aria-controls="profile" aria-selected="false">Hospitalization Rate</a></li>
+            </ul> -->
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="d1" role="tabpanel" aria-labelledby="tab-1">
+                    <div data-include="confirmed" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>
+                </div>
+                <div class="tab-pane fade active" id="d2" role="tabpanel" aria-labelledby="tab-2">
+                    <div data-include="testing_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div> 
+                </div>
+                <div class="tab-pane fade active" id="d3" role="tabpanel" aria-labelledby="tab-3">
+                    <div data-include="mortality_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>   
+                </div>
+                <div class="tab-pane fade active" id="d4" role="tabpanel" aria-labelledby="tab-4">
+                    <div data-include="hosp_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>   
+                </div>
+            
+                <!-- <div class="tab-pane fade in active" id="tab-1" role="tabpanel">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-body"
+                                style="background: #ededed; margin-top: 20px;">
+                                
+                                <div data-include="confirmed" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>
+                            </div>
+                    </div>
+                </div>
+                </div>
+                <div class="tab-pane fade in active" id="tab-2" role="tabpanel">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-body"
+                            style="background: #ededed; margin-top: 20px;">
+                            <div data-include="testing_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>   
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="tab-pane fade in active" id="tab-3" role="tabpanel">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-body"
+                                style="background: #ededed; margin-top: 20px;">
+                                <h1>hello</h1>
+                                <div data-include="mortality_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>   
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane fade in active" id="tab-4" role="tabpanel">
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-body"
+                                    style="background: #ededed; margin-top: 20px;">
+                                    <div data-include="hosp_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div> -->
+            </div>
+        </div>
+    </div>
+    <footer class="hder-footer">
+        <a class="hder-back hder-nav-list-a" href="#top">BACK TO THE TOP</a>
+        <div class="hder-bot">
+            <div class="hder-copy-right">&copy;2020 Jiarui Jiang</div>
+            <div class="hder-icon">
+                <a href="https://www.facebook.com/profile.php?id=100005314714837" target="_blank"><img class="hder-small-icon" src="../img/facebook-small.png" alt="facebook-small"></a>
+                <a href="https://github.com/GuoooooJing" target="_blank"><img class="hder-small-icon" src="../img/github-small.png" alt="github-small"></a>
+                <a href="https://www.linkedin.com/in/-jiarui-jiang/" target="_blank"><img class="hder-small-icon" src="../img/linkedin-small.png" alt="linkedin-small"></a>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script th:src="@{../js/scripts.js}"></script>
+</body>
+
+
+
+</html>
