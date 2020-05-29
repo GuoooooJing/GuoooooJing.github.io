@@ -119,6 +119,15 @@ a {
     }
 }
 
+iframe {
+    min-width: 400px;
+    min-height: 500px;
+}
+.tab-pane{
+    min-width: 400px;
+    min-height: 500px;
+}
+
 .row {
     margin-top: 4rem;
     min-height: 80%;
