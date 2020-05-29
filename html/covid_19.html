@@ -11,7 +11,40 @@
         $(this).load(file);
         });
         });
-    </script> 
+    </script>
+  <script>
+    var index2 = 0;
+    var index3 = 0;
+    var index4 = 0;
+    $(function(){
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var target = $(this).attr('href');
+            //设置激活标签对应div的高度
+            $(target).css("height","100%");
+            if(target === "#d1"){
+                $(document).ready(function () {
+                    $("#d1 .iframeurl").attr('src','hosp_rate.html');
+                });
+            }else if(target === "#d2" && index2 === 0){
+                $(document).ready(function () {
+                    $("#d2 .iframeurl").attr('src','testing_rate.html');
+                });
+                index2 ++ ;
+            }else if(target === "#d3" && index3 === 0){
+                $(document).ready(function () {
+                    $("#d3 .iframeurl").attr('src','mortality_rate.html');
+                });
+                index3 ++ ;
+            }
+            else if(target === "#d4" && index4 === 0){
+                $(document).ready(function () {
+                    $("#d4 .iframeurl").attr('src','hosp_rate.html');
+                });
+                index4 ++ ;
+            }
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     
@@ -32,7 +65,7 @@
     <header>
         <nav id="navbar" class="hder-nav">
             <ul id="nav-ul" class="hder-nav-list">
-                <li><a class="hder-nav-list-a"href="#top">COVID-19</a></li>
+                <li><a class="hder-nav-list-a" href="#top">COVID-19</a></li>
                 <li><a class="hder-nav-list-a" href="../html/hobbies.html">Hobbies</a></li>
                 <li><a class="hder-nav-list-a" href="../html/resume.html">Resume</a></li>
                 <li><a class="hder-nav-list-a" href="../html/contact.html">Contact</a></li>
@@ -44,16 +77,16 @@
         <div class="col-12">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="tab-1" data-toggle="tab" href="#d1" role="tab" aria-controls="d1" aria-selected="true">Confirmed Cases</a>
+                  <a class="nav-link active" id="tab-1" data-toggle="tab" href="#d1"">Confirmed Cases</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="tab-2" data-toggle="tab" href="#d2" role="tab" aria-controls="d2" aria-selected="false">Testing Rate</a>
+                  <a class="nav-link" id="tab-2" data-toggle="tab" href="#d2">Testing Rate</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="tab-3" data-toggle="tab" href="#d3" role="tab" aria-controls="d3" aria-selected="false">Mortality Rate</a>
+                  <a class="nav-link" id="tab-3" data-toggle="tab" href="#d3">Mortality Rate</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="tab-4" data-toggle="tab" href="#d4" role="tab" aria-controls="d4" aria-selected="false">Hospitalization Rate</a>
+                    <a class="nav-link" id="tab-4" data-toggle="tab" href="#d4">Hospitalization Rate</a>
                   </li>
               </ul>
             <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -71,64 +104,32 @@
                     aria-controls="profile" aria-selected="false">Hospitalization Rate</a></li>
             </ul> -->
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="d1" role="tabpanel" aria-labelledby="tab-1">
-                    <div data-include="confirmed" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>
-                </div>
-                <div class="tab-pane fade active" id="d2" role="tabpanel" aria-labelledby="tab-2">
-                    <div data-include="testing_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div> 
-                </div>
-                <div class="tab-pane fade active" id="d3" role="tabpanel" aria-labelledby="tab-3">
-                    <div data-include="mortality_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>   
-                </div>
-                <div class="tab-pane fade active" id="d4" role="tabpanel" aria-labelledby="tab-4">
-                    <div data-include="hosp_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>   
-                </div>
-            
-                <!-- <div class="tab-pane fade in active" id="tab-1" role="tabpanel">
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-body"
-                                style="background: #ededed; margin-top: 20px;">
-                                
-                                <div data-include="confirmed" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>
-                            </div>
+                <!-- <div class="tab-pane fade show active" id="d11" data-src="confirmed.html"> -->
+                    <!-- <div data-include="confirmed" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div> -->
+                    <div class="tab-pane fade show active embed-responsive embed-responsive-21by9" id="d1" data-src="confirmed.html">
+                    <iframe src="confirmed.html" width="95%" height="100%" frameborder="0" scrolling="no">
+                    </iframe>
                     </div>
-                </div>
-                </div>
-                <div class="tab-pane fade in active" id="tab-2" role="tabpanel">
-                <div class="panel-group">
-                    <div class="panel panel-default">
-                        <div class="panel-body"
-                            style="background: #ededed; margin-top: 20px;">
-                            <div data-include="testing_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>   
-                        </div>
+                <!-- <div class="tab-pane fade" id="d22" data-src="testing_rate.html"> -->
+                    <div class="tab-pane fade embed-responsive embed-responsive-21by9" id="d2" data-src="testing_rate.html">
+                    <iframe class="iframeurl" width="95%" height="100%" frameborder="0" scrolling="no">
+                        </iframe>  
                     </div>
-                </div>
-                </div>
-                <div class="tab-pane fade in active" id="tab-3" role="tabpanel">
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-body"
-                                style="background: #ededed; margin-top: 20px;">
-                                <h1>hello</h1>
-                                <div data-include="mortality_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>   
-                            </div>
-                        </div>
+                <!-- <div class="tab-pane fade " id="d3"  data-src="mortality_rate.html"> -->
+                    <div class="tab-pane fade embed-responsive embed-responsive-21by9" id="d3" data-src="mortality_rate.html">
+                    <iframe class="iframeurl" width="95%" height="100%" frameborder="0" scrolling="no">  
+                        </iframe>
                     </div>
+                <!-- <div class="tab-pane fade" id="d4" data-src="hosp_rate.html"> -->
+                    <div class="tab-pane fade embed-responsive embed-responsive-21by9" id="d4" data-src="hosp_rate.html">
+                    <iframe class="iframeurl" width="95%" height="100%" frameborder="0" scrolling="no">                        
+                        </iframe>
                     </div>
-                    <div class="tab-pane fade in active" id="tab-4" role="tabpanel">
-                        <div class="panel-group">
-                            <div class="panel panel-default">
-                                <div class="panel-body"
-                                    style="background: #ededed; margin-top: 20px;">
-                                    <div data-include="hosp_rate" style="max-height: 100%; max-width: 100%; height: 100%; width: 100%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        </div> -->
             </div>
         </div>
     </div>
+ 
+    
     <footer class="hder-footer">
         <a class="hder-back hder-nav-list-a" href="#top">BACK TO THE TOP</a>
         <div class="hder-bot">
