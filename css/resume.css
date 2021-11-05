@@ -168,7 +168,7 @@
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 70px;
+    grid-column-gap: 50px;
   }
   .profile {
     object-fit: contain;
