@@ -168,7 +168,7 @@
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 150px;
+    grid-column-gap: 70px;
   }
   .profile {
     object-fit: contain;
@@ -178,7 +178,7 @@
     align-self: left!important;
   }
   .intro {
-      width: 30rem;
+      width: 35rem;
       justify-self: left;
       align-self: center;
   }
